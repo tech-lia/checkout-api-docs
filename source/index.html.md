@@ -90,8 +90,15 @@ api.kittens.get()
 ```
 
 ```shell
-curl "http://example.com/api/kittens" \
-  -H "Authorization: meowmeowmeow"
+curl --request POST \
+  --url http://localhost:3008/v1/prices \
+  --header 'Content-Type: application/json' \
+  --cookie lia_account_signed_in=true \
+  --data '{
+	"extended_payment_id": "081617e1-5701-4e11-96ec-77172b522184",
+	"discount": 0,
+	"amounts": []
+}'
 ```
 
 ```javascript
